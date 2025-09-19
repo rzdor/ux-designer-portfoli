@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Browser window -->
+  <rect x="50" y="50" width="700" height="500" rx="8" fill="#F9FAFB" stroke="#E5E7EB"/>
+  
+  <!-- Browser header -->
+  <rect x="50" y="50" width="700" height="40" rx="8" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <circle cx="70" cy="70" r="6" fill="#EF4444"/>
+  <circle cx="90" cy="70" r="6" fill="#F59E0B"/>
+  <circle cx="110" cy="70" r="6" fill="#10B981"/>
+  <rect x="300" y="62" width="200" height="16" rx="8" fill="#F3F4F6"/>
+  
+  <!-- Sidebar -->
+  <rect x="50" y="90" width="180" height="460" fill="#1F2937"/>
+  <rect x="70" y="110" width="140" height="30" rx="6" fill="#374151"/>
+  <text x="140" y="130" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle">VendorHub</text>
+  
+  <!-- Sidebar navigation -->
+  <rect x="70" y="160" width="140" height="35" rx="6" fill="#3B82F6"/>
+  <rect x="80" y="170" width="15" height="15" rx="2" fill="#FFFFFF"/>
+  <text x="105" y="182" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#FFFFFF">Dashboard</text>
+  
+  <rect x="70" y="205" width="140" height="35" rx="6" fill="transparent"/>
+  <rect x="80" y="215" width="15" height="15" rx="2" fill="#9CA3AF"/>
+  <text x="105" y="227" font-family="Inter, sans-serif" font-size="12" font-weight="400" fill="#D1D5DB">Vendors</text>
+  
+  <rect x="70" y="250" width="140" height="35" rx="6" fill="transparent"/>
+  <rect x="80" y="260" width="15" height="15" rx="2" fill="#9CA3AF"/>
+  <text x="105" y="272" font-family="Inter, sans-serif" font-size="12" font-weight="400" fill="#D1D5DB">Orders</text>
+  
+  <rect x="70" y="295" width="140" height="35" rx="6" fill="transparent"/>
+  <rect x="80" y="305" width="15" height="15" rx="2" fill="#9CA3AF"/>
+  <text x="105" y="317" font-family="Inter, sans-serif" font-size="12" font-weight="400" fill="#D1D5DB">Analytics</text>
+  
+  <!-- Main content area -->
+  <rect x="230" y="90" width="520" height="460" fill="#FFFFFF"/>
+  
+  <!-- Header with metrics -->
+  <text x="250" y="125" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#1F2937">Vendor Performance Dashboard</text>
+  
+  <!-- Metric cards -->
+  <rect x="250" y="150" width="120" height="80" rx="8" fill="#F0F9FF" stroke="#BAE6FD"/>
+  <text x="270" y="170" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#0369A1">Total Vendors</text>
+  <text x="270" y="200" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#0369A1">247</text>
+  <text x="270" y="215" font-family="Inter, sans-serif" font-size="11" fill="#0369A1">↗ +12% this month</text>
+  
+  <rect x="390" y="150" width="120" height="80" rx="8" fill="#F0FDF4" stroke="#BBF7D0"/>
+  <text x="410" y="170" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#059669">Active Orders</text>
+  <text x="410" y="200" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#059669">1,432</text>
+  <text x="410" y="215" font-family="Inter, sans-serif" font-size="11" fill="#059669">↗ +8% this week</text>
+  
+  <rect x="530" y="150" width="120" height="80" rx="8" fill="#FEF3C7" stroke="#FDE68A"/>
+  <text x="550" y="170" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#D97706">Avg. Response</text>
+  <text x="550" y="200" font-family="Inter, sans-serif" font-size="28" font-weight="700" fill="#D97706">2.4h</text>
+  <text x="550" y="215" font-family="Inter, sans-serif" font-size="11" fill="#D97706">↓ -15% improved</text>
+  
+  <!-- Chart area -->
+  <rect x="250" y="260" width="480" height="200" rx="8" fill="#F9FAFB" stroke="#E5E7EB"/>
+  <text x="270" y="285" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#1F2937">Order Volume Trends</text>
+  
+  <!-- Simple line chart -->
+  <polyline points="270,420 320,380 370,360 420,340 470,350 520,320 570,300 620,290 670,275 710,260" 
+            stroke="#3B82F6" stroke-width="3" fill="none"/>
+  <circle cx="320" cy="380" r="4" fill="#3B82F6"/>
+  <circle cx="420" cy="340" r="4" fill="#3B82F6"/>
+  <circle cx="620" cy="290" r="4" fill="#3B82F6"/>
+  
+  <!-- Vendor list -->
+  <rect x="250" y="480" width="480" height="60" rx="8" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="270" y="505" font-family="Inter, sans-serif" font-size="16" font-weight="600" fill="#1F2937">Top Performing Vendors</text>
+  
+  <!-- Vendor items -->
+  <rect x="270" y="515" width="200" height="20" rx="4" fill="#F3F4F6"/>
+  <circle cx="280" cy="525" r="5" fill="#10B981"/>
+  <text x="295" y="529" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#1F2937">TechSupply Co.</text>
+  <text x="450" y="529" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#059669">98.5%</text>
+  
+  <!-- Design annotations -->
+  <g stroke="#FF6B6B" stroke-width="2" fill="none" stroke-dasharray="5,5">
+    <rect x="240" y="140" width="420" height="100"/>
+    <line x1="140" y1="190" x2="240" y2="190"/>
+  </g>
+  <text x="135" y="187" font-family="Inter, sans-serif" font-size="12" fill="#FF6B6B" text-anchor="end">Key metrics at-a-glance</text>
+  <text x="135" y="200" font-family="Inter, sans-serif" font-size="12" fill="#FF6B6B" text-anchor="end">reduce cognitive load</text>
+  
+  <g stroke="#FF6B6B" stroke-width="2" fill="none" stroke-dasharray="5,5">
+    <rect x="240" y="250" width="500" height="220"/>
+    <line x1="760" y1="360" x2="740" y2="360"/>
+  </g>
+  <text x="765" y="357" font-family="Inter, sans-serif" font-size="12" fill="#FF6B6B">Visual data representation</text>
+  <text x="765" y="370" font-family="Inter, sans-serif" font-size="12" fill="#FF6B6B">for quick insights</text>
+</svg>

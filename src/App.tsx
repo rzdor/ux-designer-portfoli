@@ -22,18 +22,23 @@ import {
 } from "@phosphor-icons/react"
 import { toast } from "sonner"
 
+// Import project images
+import healthTechImage from "@/assets/images/project-healthtech.svg"
+import dashboardImage from "@/assets/images/project-dashboard.svg"
+import finTechImage from "@/assets/images/project-fintech.svg"
+
 interface Project {
   id: string
   title: string
   description: string
   category: string
-  imageUrl: string
+  imageUrl?: string
   tags: string[]
-  overview: string
-  problem: string
-  solution: string
-  results: string[]
-  tools: string[]
+  overview?: string
+  problem?: string
+  solution?: string
+  results?: string[]
+  tools?: string[]
 }
 
 interface ContactForm {
@@ -67,6 +72,64 @@ function App() {
   const tools = [
     "Figma", "Sketch", "Adobe XD", "Principle", "InVision", "Miro",
     "Notion", "Hotjar", "Maze", "Optimal Workshop"
+  ]
+
+  // Sample projects with real Figma design images
+  const sampleProjects = [
+    {
+      id: "healthtech",
+      title: "HealthTech Mobile App",
+      category: "Healthcare",
+      description: "Redesigned patient portal to improve medication adherence by 40%",
+      tags: ["Mobile", "Healthcare", "User Research"],
+      imageUrl: healthTechImage,
+      overview: "A comprehensive redesign of a healthcare mobile app focused on improving medication adherence through intuitive interface design and behavioral psychology principles.",
+      problem: "Patients were struggling with medication adherence due to complex interfaces and lack of clear scheduling systems. The existing app had a 23% daily active user rate and poor medication compliance tracking.",
+      solution: "Implemented a card-based interface with clear visual hierarchy, prominent call-to-action buttons for medication taking, and simplified scheduling views. Added behavioral nudges and progress tracking to encourage consistent usage.",
+      results: [
+        "40% improvement in medication adherence rates",
+        "65% increase in daily active users",
+        "32% reduction in user task completion time",
+        "4.7/5 App Store rating (up from 2.8/5)"
+      ],
+      tools: ["Figma", "Principle", "Maze", "Hotjar"]
+    },
+    {
+      id: "dashboard",
+      title: "E-commerce Dashboard",
+      category: "B2B SaaS",
+      description: "Streamlined vendor management interface reducing task completion time by 60%",
+      tags: ["Dashboard", "B2B", "Data Visualization"],
+      imageUrl: dashboardImage,
+      overview: "A complete overhaul of a vendor management dashboard focusing on data hierarchy, visual clarity, and workflow optimization for e-commerce businesses managing multiple suppliers.",
+      problem: "Vendors and administrators were spending excessive time navigating complex workflows. The existing system had poor information architecture, leading to frequent errors and frustrated users with scattered data across multiple screens.",
+      solution: "Created a unified dashboard with clear navigation patterns, at-a-glance metrics, and streamlined vendor onboarding flows. Implemented progressive disclosure for complex data and introduced visual data representations to reduce cognitive load.",
+      results: [
+        "60% reduction in task completion time",
+        "45% decrease in user errors",
+        "78% improvement in user satisfaction scores",
+        "35% increase in platform adoption by new vendors"
+      ],
+      tools: ["Figma", "Adobe XD", "Miro", "Optimal Workshop"]
+    },
+    {
+      id: "fintech",
+      title: "Financial Planning Tool",
+      category: "FinTech",
+      description: "Simplified investment portfolio management for first-time investors",
+      tags: ["FinTech", "Web App", "Accessibility"],
+      imageUrl: finTechImage,
+      overview: "A user-friendly investment platform designed specifically for first-time investors, focusing on education, simplicity, and confidence-building through clear visual design and progressive disclosure.",
+      problem: "First-time investors found existing investment platforms intimidating and overly complex. High bounce rates and low conversion indicated that users felt overwhelmed by financial jargon and complex interfaces.",
+      solution: "Designed an educational-first approach with guided onboarding, simplified portfolio visualizations, and plain-language explanations. Created progressive investment recommendations and clear risk indicators to build user confidence.",
+      results: [
+        "73% increase in user onboarding completion",
+        "52% improvement in first investment conversion",
+        "89% user satisfaction with educational content",
+        "41% reduction in customer support queries"
+      ],
+      tools: ["Figma", "InVision", "Maze", "Notion"]
+    }
   ]
 
   return (
@@ -127,29 +190,20 @@ function App() {
 
           {(projects || []).length === 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Sample Project Cards */}
-              {[
-                {
-                  title: "HealthTech Mobile App",
-                  category: "Healthcare",
-                  description: "Redesigned patient portal to improve medication adherence by 40%",
-                  tags: ["Mobile", "Healthcare", "User Research"]
-                },
-                {
-                  title: "E-commerce Dashboard",
-                  category: "B2B SaaS",
-                  description: "Streamlined vendor management interface reducing task completion time by 60%",
-                  tags: ["Dashboard", "B2B", "Data Visualization"]
-                },
-                {
-                  title: "Financial Planning Tool",
-                  category: "FinTech",
-                  description: "Simplified investment portfolio management for first-time investors",
-                  tags: ["FinTech", "Web App", "Accessibility"]
-                }
-              ].map((project, index) => (
-                <Card key={index} className="group cursor-pointer hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
-                  <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-t-lg"></div>
+              {/* Sample Project Cards with real images */}
+              {sampleProjects.map((project, index) => (
+                <Card 
+                  key={index} 
+                  className="group cursor-pointer hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  onClick={() => setSelectedProject(project)}
+                >
+                  <div className="aspect-video overflow-hidden rounded-t-lg">
+                    <img 
+                      src={project.imageUrl} 
+                      alt={project.title}
+                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
                   <CardContent className="p-6">
                     <Badge variant="secondary" className="mb-3">{project.category}</Badge>
                     <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-accent transition-colors">
@@ -175,7 +229,17 @@ function App() {
                   className="group cursor-pointer hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                   onClick={() => setSelectedProject(project)}
                 >
-                  <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-t-lg"></div>
+                  <div className="aspect-video overflow-hidden rounded-t-lg">
+                    {project.imageUrl ? (
+                      <img 
+                        src={project.imageUrl} 
+                        alt={project.title}
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-accent/20 to-primary/20"></div>
+                    )}
+                  </div>
                   <CardContent className="p-6">
                     <Badge variant="secondary" className="mb-3">{project.category}</Badge>
                     <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-accent transition-colors">
@@ -361,10 +425,16 @@ function App() {
                 
                 <TabsContent value="overview" className="mt-6">
                   <div className="space-y-4">
-                    <div className="aspect-video bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg"></div>
+                    <div className="aspect-video overflow-hidden rounded-lg">
+                      <img 
+                        src={selectedProject.imageUrl} 
+                        alt={selectedProject.title}
+                        className="w-full h-full object-cover object-center"
+                      />
+                    </div>
                     <p className="text-muted-foreground">{selectedProject.overview}</p>
                     <div className="flex flex-wrap gap-2">
-                      {selectedProject.tools.map((tool, index) => (
+                      {selectedProject.tools?.map((tool, index) => (
                         <Badge key={index} variant="outline">{tool}</Badge>
                       ))}
                     </div>
@@ -381,7 +451,7 @@ function App() {
                 
                 <TabsContent value="results" className="mt-6">
                   <ul className="space-y-2">
-                    {selectedProject.results.map((result, index) => (
+                    {selectedProject.results?.map((result, index) => (
                       <li key={index} className="flex items-start gap-2">
                         <TrendUp className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                         <span className="text-muted-foreground">{result}</span>

@@ -2,10 +2,10 @@
 
 A professional showcase platform that presents UX design work, process, and expertise to potential clients and employers.
 
-**Experience Qualities**:
-1. **Professional** - Clean, sophisticated interface that reflects design expertise and attention to detail
-2. **Intuitive** - Effortless navigation that guides visitors through the designer's journey and work samples
-3. **Inspiring** - Visually compelling presentation that demonstrates creative problem-solving and design thinking
+
+- Primarily focused on presenting design work, case studies, and professional information with minimal inte
+## Essential Features
+### Project Gallery
 
 **Complexity Level**: Content Showcase (information-focused)
 - Primarily focused on presenting design work, case studies, and professional information with minimal interactive functionality beyond navigation and contact forms.
@@ -16,24 +16,24 @@ A professional showcase platform that presents UX design work, process, and expe
 - **Functionality**: Display featured UX design projects with preview images and descriptions
 - **Purpose**: Showcase design skills and demonstrate range of work across different industries/clients
 - **Trigger**: Visitor lands on homepage or navigates to portfolio section
-- **Progression**: Homepage hero → Featured projects grid → Individual project detail view → Related projects
-- **Success criteria**: Visitors can easily browse projects and understand the designer's capabilities
+- **Functionality**: Direct communication channel for project inquiries and opportunities
+- **Trigger**: Contact button/link throughout the site
 
-### Case Study Details
-- **Functionality**: In-depth project breakdowns showing design process, challenges, and solutions
-- **Purpose**: Demonstrate UX methodology, problem-solving approach, and design thinking
-- **Trigger**: Clicking on a project from the gallery
-- **Progression**: Project overview → Problem statement → Research & insights → Design process → Final solution → Results/impact
-- **Success criteria**: Visitors understand the designer's process and see tangible value delivered
+## Edge Case Handling
+- **Mobile Responsiveness**: Ensure all case study images and layouts work seamlessly across devic
+- **Form Validation**: Provide clear error messages and prevent spam submissions
 
-### About/Bio Section
-- **Functionality**: Personal introduction, skills, experience, and design philosophy
-- **Purpose**: Build trust and connection with potential clients/employers
-- **Trigger**: Navigation click or scroll from homepage
-- **Progression**: Personal intro → Skills/tools → Experience highlights → Design approach → Call-to-action
-- **Success criteria**: Visitors feel confident in the designer's expertise and personality fit
+The design should feel sophisticated, clean, and effortlessly professional - reflecting the high standards expected from a UX de
+## Color Selection
 
-### Contact/Inquiry Form
+- **Secondary Colors*
+- **Foreground/Background Pairings**:
+  - Card (Light Gray oklch(0.98 0.005 60)): Deep charcoal text (oklch(0.25
+  - Accent (Warm Copper oklch(0.7 0.12 45)): White text
+## Font Selection
+
+
+  - H3 (Subsections): In
 - **Functionality**: Direct communication channel for project inquiries and opportunities
 - **Purpose**: Convert portfolio visitors into potential clients or interview opportunities
 - **Trigger**: Contact button/link throughout the site
@@ -70,7 +70,7 @@ Typography should convey modern professionalism with excellent readability, usin
   - H2 (Section Headers): Inter SemiBold/32px/normal letter spacing
   - H3 (Subsections): Inter Medium/24px/normal letter spacing
   - Body Text: Inter Regular/16px/relaxed line height (1.6)
-  - Captions: Inter Regular/14px/normal line height
+
   - UI Elements: Inter Medium/14px/normal letter spacing
 
 ## Animations
@@ -84,26 +84,26 @@ Subtle, purposeful animations that enhance the professional feel without being d
   - Cards for project previews with hover states
   - Dialogs for project case study details or image galleries
   - Forms for contact inquiries with validation
-  - Buttons with clear hierarchy (primary for contact, secondary for navigation)
+
   - Tabs for organizing case study sections (Research, Design, Results)
-- **Customizations**: 
+
   - Custom image gallery component for case study visuals
-  - Animated project grid with stagger effects
+
   - Custom hero section with typed text or subtle parallax
-- **States**: 
+
   - Button hover states with subtle elevation and color shifts
-  - Card hover states with gentle scale and shadow changes
+
   - Form inputs with smooth focus transitions and validation feedback
 - **Icon Selection**: 
   - Phosphor icons for social links, contact, and navigation (subtle and professional)
   - Arrow icons for project navigation and CTAs
   - Tool icons for skills section (Figma, Sketch, etc.)
-- **Spacing**: 
+
   - Generous sections (py-20, py-16) for breathing room
   - Consistent component spacing (gap-8, gap-6) for rhythm
   - Container max-widths (max-w-6xl) for optimal reading lengths
-- **Mobile**: 
+
   - Mobile-first grid system (grid-cols-1 md:grid-cols-2 lg:grid-cols-3)
-  - Collapsible navigation with hamburger menu
+
   - Touch-friendly button sizes (min-h-12) and spacing
   - Simplified typography scale for smaller screens
